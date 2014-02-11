@@ -1,7 +1,7 @@
 Project Leonhard solutions
 -----------------------
 
-http://<projeu_url>/profile/kramimus.png
+http://projeu url/profile/kramimus.png
 
 Not much to say, obligatory repo of my own Project Leonhard solutions.
 
