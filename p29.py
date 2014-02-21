@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 remaining_power = {}
 
@@ -9,6 +9,6 @@ if __name__ == '__main__':
             # filter out products that have already been computed at lower a
             if a not in remaining_power or b > remaining_power[a]:
                 prod = a**b
-                remaining_power[prod] = 100 / b
+                remaining_power[prod] = 100 // b
                 terms.add(prod)
-    print len(terms)
+    print(len(terms))
