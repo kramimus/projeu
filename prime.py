@@ -17,6 +17,8 @@ def is_prime(n):
 
 
 def get_primes_up_to(max_n):
+    """ sieve of erasthenes
+    """
     primes = set()
     numbers_left = OrderedDict((i, True) for i in range(2, max_n))
     while numbers_left:

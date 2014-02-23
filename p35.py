@@ -16,9 +16,15 @@ if __name__ == '__main__':
     while primes:
         p = primes.pop()
         rotations = generate_rotations(p)
-        print(p, rotations)
-        if primes & rotations == rotations:
+
+        # special case for 11
+        if len(rotations) > 0 and next(iter(rotations)) == p:
+            circular.append(p)
+
+        elif primes & rotations == rotations:
+            print(p, rotations)
             circular.append(p)
             circular += rotations
         primes -= rotations
+    print(circular)
     print(len(circular))
