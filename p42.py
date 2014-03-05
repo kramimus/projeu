@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import csv
+import itertools
 import string
 
 def get_words(fword):
@@ -16,12 +17,10 @@ def get_max_triangle_value(words):
 
 def get_triangle_numbers_up_to(max_tri):
     tri_nums = set()
-    i = 1
     curr_tri = 0
-    while curr_tri < max_tri:
+    for i in itertools.count(start=1):
         curr_tri = 0.5 * i * (i + 1)
         tri_nums.add(curr_tri)
-        i += 1
     return tri_nums
 
 def words_to_nums(words):
