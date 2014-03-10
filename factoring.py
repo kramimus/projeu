@@ -5,8 +5,8 @@ def get_prime_factors(n):
         if n % i == 0:
             return [i] + get_prime_factors(n / i)
     else:
-        return [n]
-    return factors
+        return [int(n)]
+    return []
 
 def get_proper_divisors(n, j=2):
     return [i for i in range(1, n) if n % i == 0]
@@ -20,7 +20,6 @@ def get_amicable(nums):
     for i in nums:
         sum_i = divisor_sums[i]
         if i == divisor_sums.get(sum_i, 0) and sum_i != i:
-            print i, sum_i
             amicable.append(i)
 
 def get_abundant(nums):
